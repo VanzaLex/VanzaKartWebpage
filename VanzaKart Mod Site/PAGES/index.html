@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.title">VanzaKart Modpack - The Ultimate Mario Kart Wii Experience</title>
+    <meta name="description"
+        content="Scarica VanzaKart, il nuovo modpack per Mario Kart Wii su Dolphin. Unisciti alla gara con il nostro launcher esclusivo!"
+        data-i18n-attr="content|meta.desc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../STYLES/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="glass-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../FOOTAGE/logo_vanzakart_00000.png" alt="VanzaKart Icon" class="logo-img">
+                <span class="logo-text">VanzaKart</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.home" class="active-link">Home</a>
+                <a href="team.html" data-i18n="nav.team">Il nostro Team</a>
+                <a href="guide.html" data-i18n="nav.guide">Guida</a>
+                <a href="https://discord.gg/E4n7bCBe5z" target="_blank" class="discord-nav"><i
+                        class="fa-brands fa-discord"></i> Discord</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button id="langBtn" class="lang-btn">
+                        <span id="currentLang"><img src="https://flagcdn.com/w20/gb.png"
+                                srcset="https://flagcdn.com/w40/gb.png 2x" width="16" alt="EN"> EN</span> <i
+                            class="fa-solid fa-chevron-down small-icon"></i>
+                    </button>
+                    <div class="lang-dropdown glass-card" id="langDropdown">
+                        <a href="#" data-lang="it" class="lang-option"><img src="https://flagcdn.com/w20/it.png"
+                                srcset="https://flagcdn.com/w40/it.png 2x" width="16" alt="IT"> Italiano</a>
+                        <a href="#" data-lang="en" class="lang-option"><img src="https://flagcdn.com/w20/gb.png"
+                                srcset="https://flagcdn.com/w40/gb.png 2x" width="16" alt="EN"> English</a>
+                        <a href="#" data-lang="es" class="lang-option"><img src="https://flagcdn.com/w20/es.png"
+                                srcset="https://flagcdn.com/w40/es.png 2x" width="16" alt="ES"> Español</a>
+                        <a href="#" data-lang="de" class="lang-option"><img src="https://flagcdn.com/w20/de.png"
+                                srcset="https://flagcdn.com/w40/de.png 2x" width="16" alt="DE"> Deutsch</a>
+                        <a href="#" data-lang="fr" class="lang-option"><img src="https://flagcdn.com/w20/fr.png"
+                                srcset="https://flagcdn.com/w40/fr.png 2x" width="16" alt="FR"> Français</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section text-center">
+            <div class="container hero-content">
+                <div class="hero-image-wrapper">
+                    <img src="../FOOTAGE/logo_vanzakart_00000.png" alt="VanzaKart Modpack"
+                        class="hero-image glowing-img">
+                </div>
+                <h1 class="hero-title" data-i18n="hero.title">Rivoluziona il tuo <br><span class="gradient-text">Mario
+                        Kart Wii</span></h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">VanzaKart è il modpack definitivo da giocare su
+                    Dolphin. Nuove piste, nuovi personaggi, e un launcher sviluppato appositamente per un'esperienza
+                    fluida e immediata.</p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary"><i class="fa-solid fa-download"></i> <span
+                            data-i18n="hero.cta.download">Scarica il Launcher</span></a>
+                    <a href="https://discord.gg/E4n7bCBe5z" target="_blank" class="btn btn-secondary"><i
+                            class="fa-brands fa-discord"></i> <span data-i18n="hero.cta.discord">Unisciti alla
+                            Community</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-i18n="features.title">Perché scegliere <span
+                        class="gradient-text">VanzaKart</span>?</h2>
+                <div class="features-grid">
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-road"></i></div>
+                        <h3 data-i18n="features.tracks.title">Piste Inedite</h3>
+                        <p data-i18n="features.tracks.desc">Corri su centinaia di tracciati custom creati dalla
+                            community e ottimizzati al massimo per un'esperienza di gioco spettacolare.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3 data-i18n="features.launcher.title">Launcher Custom</h3>
+                        <p data-i18n="features.launcher.desc">Dimentica le configurazioni complesse. Il nostro launcher
+                            proprietario gestisce tutto automaticamente con un solo click.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <h3 data-i18n="features.dolphin.title">Dolphin-Ready</h3>
+                        <p data-i18n="features.dolphin.desc">Integrazione perfetta e nativa con l'emulatore Dolphin per
+                            garantire prestazioni e stabilità sui PC moderni.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download-section">
+            <div class="container text-center">
+                <div class="cta-banner glass-card glow-card">
+                    <h2 class="cta-title" data-i18n="cta.title">Pronto per accendere i motori?</h2>
+                    <p class="cta-desc" data-i18n="cta.desc">Scarica subito il nostro Launcher per PC. Include tutte le
+                        patch e gli strumenti per installare VanzaKart in modo automatico.</p>
+                    <button id="downloadLauncherBtn" class="btn btn-primary btn-large glow-btn">
+                        <i class="fa-solid fa-download"></i> <span data-i18n="cta.btn">Scarica VanzaKart Launcher</span>
+                    </button>
+                    <small class="download-note" data-i18n="cta.note">Richiede Windows 10/11 - ~3GB (Download
+                        Iniziale)</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="logo footer-logo">
+                    <img src="../FOOTAGE/vanza_kart_icon_00000.png" alt="VanzaKart Icon" class="logo-img-small">
+                    <span class="logo-text">VanzaKart</span>
+                </div>
+                <p data-i18n="footer.copy">&copy; 2026 Lacly's Paradise. Tutti i diritti riservati.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://discord.gg/E4n7bCBe5z" target="_blank" class="social-link" title="Discord">
+                    <i class="fa-brands fa-discord"></i> <span data-i18n="footer.discord">Entra nel server
+                        Discord</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../SCRIPTS/script.js"></script>
+</body>
+
+</html>

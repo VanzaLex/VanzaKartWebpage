@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="guide.meta.title">VanzaKart Modpack - Guida di Installazione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../STYLES/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+            margin: 2rem auto 4rem;
+            max-width: 900px;
+        }
+
+        .video-container iframe,
+        .video-container video,
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 24px;
+        }
+
+        .video-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(8, 10, 20, 0.8), rgba(255, 0, 85, 0.1));
+            color: var(--text-muted);
+        }
+
+        .video-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            filter: drop-shadow(0 0 15px rgba(255, 0, 85, 0.5));
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            box-shadow: 0 5px 15px rgba(255, 0, 85, 0.3);
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: var(--text-main);
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .guide-hero {
+            min-height: auto;
+            padding: 10rem 0 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .guide-hero {
+                padding: 8rem 0 2rem;
+            }
+
+            .step-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+                padding: 1.2rem;
+            }
+
+            .steps-container {
+                text-align: center;
+            }
+
+            .video-placeholder i {
+                font-size: 3rem;
+            }
+
+            .video-placeholder h3 {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .video-placeholder p {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="glass-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="../FOOTAGE/logo_vanzakart_00000.png" alt="VanzaKart Icon" class="logo-img">
+                <span class="logo-text">VanzaKart</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="team.html" data-i18n="nav.team">Il nostro Team</a>
+                <a href="guide.html" data-i18n="nav.guide" class="active-link">Guida</a>
+                <a href="https://discord.gg/E4n7bCBe5z" target="_blank" class="discord-nav"><i
+                        class="fa-brands fa-discord"></i> Discord</a>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button id="langBtn" class="lang-btn">
+                        <span id="currentLang"><img src="https://flagcdn.com/w20/gb.png"
+                                srcset="https://flagcdn.com/w40/gb.png 2x" width="16" alt="EN"> EN</span> <i
+                            class="fa-solid fa-chevron-down small-icon"></i>
+                    </button>
+                    <div class="lang-dropdown glass-card" id="langDropdown">
+                        <a href="#" data-lang="it" class="lang-option"><img src="https://flagcdn.com/w20/it.png"
+                                srcset="https://flagcdn.com/w40/it.png 2x" width="16" alt="IT"> Italiano</a>
+                        <a href="#" data-lang="en" class="lang-option"><img src="https://flagcdn.com/w20/gb.png"
+                                srcset="https://flagcdn.com/w40/gb.png 2x" width="16" alt="EN"> English</a>
+                        <a href="#" data-lang="es" class="lang-option"><img src="https://flagcdn.com/w20/es.png"
+                                srcset="https://flagcdn.com/w40/es.png 2x" width="16" alt="ES"> Español</a>
+                        <a href="#" data-lang="de" class="lang-option"><img src="https://flagcdn.com/w20/de.png"
+                                srcset="https://flagcdn.com/w40/de.png 2x" width="16" alt="DE"> Deutsch</a>
+                        <a href="#" data-lang="fr" class="lang-option"><img src="https://flagcdn.com/w20/fr.png"
+                                srcset="https://flagcdn.com/w40/fr.png 2x" width="16" alt="FR"> Français</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="guide-page">
+        <section class="hero-section guide-hero text-center">
+            <div class="container">
+                <h1 class="hero-title" data-i18n="guide.hero.title">Guida all'<span
+                        class="gradient-text">Installazione</span></h1>
+                <p class="hero-subtitle" data-i18n="guide.hero.subtitle">Scopri come installare VanzaKart e configurare
+                    Dolphin per iniziare a giocare in pochi minuti.</p>
+
+                <div class="video-container">
+                    <!-- Placeholder per il Video. In futuro potrai sostituire il div qui sotto con un <video> o <iframe> -->
+                    <div class="video-placeholder">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <h3 data-i18n="guide.video.title">Video Tutorial in Arrivo</h3>
+                        <p data-i18n="guide.video.desc">Stiamo preparando un video dettagliato per mostrarti tutti i
+                            passaggi.</p>
+                    </div>
+                </div>
+
+                <div class="steps-container">
+                    <h2 class="section-title text-center" style="margin-bottom: 3rem;" data-i18n="guide.steps.title">
+                        Istruzioni Passo-Passo</h2>
+
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 data-i18n="guide.step1.title">Scarica il Launcher</h3>
+                            <p data-i18n="guide.step1.desc">Visita la pagina principale e clicca sul pulsante di
+                                download per ottenere l'eseguibile del nostro Launcher Ufficiale (~3GB).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 data-i18n="guide.step2.title">Avvia l'Installazione</h3>
+                            <p data-i18n="guide.step2.desc">Esegui il file scaricato. Il launcher si occuperà
+                                automaticamente di scaricare le mod aggiornate e configurare l'ambiente di gioco.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 data-i18n="guide.step3.title">Configura Dolphin</h3>
+                            <p data-i18n="guide.step3.desc">Il launcher integra Dolphin. Al primo avvio, assicurati di
+                                configurare il tuo controller (tastiera o joystick) nelle impostazioni dell'emulatore.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 data-i18n="guide.step4.title">Gioca!</h3>
+                            <p data-i18n="guide.step4.desc">Seleziona "Avvia VanzaKart" dal menu del launcher e
+                                preparati a sfrecciare sulle nuove piste!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="logo footer-logo">
+                    <img src="../FOOTAGE/logo_vanzakart_00000.png" alt="VanzaKart Icon" class="logo-img-small">
+                    <span class="logo-text">VanzaKart</span>
+                </div>
+                <p data-i18n="footer.copy">&copy; 2026 Lacly's Paradise. Tutti i diritti riservati.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://discord.gg/E4n7bCBe5z" target="_blank" class="social-link" title="Discord">
+                    <i class="fa-brands fa-discord"></i> <span data-i18n="footer.discord">Entra nel server
+                        Discord</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../SCRIPTS/script.js"></script>
+</body>
+
+</html>
